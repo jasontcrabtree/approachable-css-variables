@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!-->
+<html class="no-js">
+	<!--<![endif]-->
+	<head>
+		<meta charset="utf-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<title>CSS Variables</title>
+		<meta
+			name="description"
+			content="An approachable, beginners friendly introduction to designing websites using CSS Variables. No experience with code necessary!"
+		/>
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+
+		<style>
+			:root {
+				/* Setting a colour hex-code variable */
+				--favourite-blue: #464794;
+
+				/* An 8px variable */
+				--utility-8: 8px;
+
+				/* A 16px variable */
+				--utility-16: 16px;
+
+				/* An 24px variable */
+				--utility-24: 24px;
+
+				/* A 48px variable */
+				--utility-48: 48px;
+
+				/* A 64px variable */
+				--utility-64: 64px;
+
+				/* Creating an 'auto' size variable */
+				--utility-auto: auto;
+			}
+
+			html {
+				/* Fonts styles */
+				font-family: Helvetica, -apple-system, BlinkMacSystemFont, "Segoe UI",
+					Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue",
+					sans-serif;
+
+				/* General border styles */
+				border-width: 24px;
+				border-style: solid;
+				/* height: 98vh; */
+
+				/* Setting the border to our variable */
+				border-color: var(--favourite-blue);
+
+				/* Change all text to be the same colour as the variable */
+				color: var(--favourite-blue);
+			}
+
+			.figure__image--layout {
+				/* Positition the image automatically in the middle (equal sides margin left and right */
+				margin: var(--utility-auto);
+
+				/* Add Padding to the top and bottom of the figure */
+				padding-top: var(--utility-8);
+				padding-bottom: var(--utility-8);
+			}
+
+			.main__content--layout {
+				/* Adding padding to the overall content for styling purposes */
+				padding-left: var(--utility-24);
+				padding-right: var(--utility-24);
+				padding-top: var(--utility-8);
+				padding-bottom: var(--utility-8);
+			}
+
+			.section-component__container--layout {
+				/* Automatically centering the main content */
+				margin: var(--utility-auto);
+
+				/* Using a calculattion to choose the content-width, with an automatic resize to add responsiveness  */
+				max-width: calc(var(--utility-24) * 22);
+				width: var(--utility-auto);
+			}
+
+			/* Making the image size responsively */
+			.figure__image--size {
+				max-width: 640px;
+				width: 100%;
+			}
+		</style>
+	</head>
+	<body>
+		<!--[if lt IE 7]>
+			<p class="browsehappy"
+				>You are using an <strong>outdated</strong> browser. Please
+				<a href="#">upgrade your browser</a> to improve your experience.</p
+			>
+		<![endif]-->
+
+		<!-- Main Content Section -->
+		<main class="main__content--layout">
+			<!-- Image Component -->
+			<figure class="figure__image--layout figure__image--size">
+				<img
+					class="figure__image--layout
+					figure__image--size "
+					src="https://res.cloudinary.com/jasontcrabtree/image/upload/v1559323718/donovan-arias-1402557-unsplash.jpg"
+					alt="Brightly coloured art supplies ready to use to create our masterpiece"
+				/>
+				<figcaption>
+					Photo by
+					<a href="https://unsplash.com/@donovan_arias?">Donovan Arias</a> on
+					<a href="https://unsplash.com/">Unsplash</a></figcaption
+				>
+			</figure>
+
+			<!-- Main Text Component -->
+			<section class="section-component__container--layout ">
+				<h1>
+					An Approachable Introduction to CSS Variables!
+				</h1>
+				<p>
+					This is a simple HTML webpage. We haven't used any CSS to style
+					things, just foundational HTML.
+				</p>
+			</section>
+
+			<!-- Text List Component -->
+			<section class="section-component__container--layout ">
+				<h2>
+					Applying CSS Variables:
+				</h2>
+				<p>
+					We're going to apply some CSS varibles to change how this page looks.
+				</p>
+				<h4>We're going to change:</h4>
+				<ul>
+					<li>Colours</li>
+					<li>Layout</li>
+					<li>Typography</li>
+				</ul>
+			</section>
+		</main>
+	</body>
+</html>
